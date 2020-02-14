@@ -15,7 +15,7 @@ docker-compose up -d --build
 
 # Connector run
 ```bash
-curl -X POST -H "Content-Type: application/json" --data @config/connector_l2ptn_tunnel.config http://localhost:8083/connectors
+curl -X POST -H "Content-Type: application/json" --data @config/connector_l2ptn_ftp_pm.config http://localhost:8083/connectors
 ```
 
 # Check Run Connector

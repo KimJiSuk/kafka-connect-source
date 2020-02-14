@@ -1,4 +1,4 @@
-package com.kafka.connect.source.l2ptn.tl1;
+package com.kafka.connect.source.l2ptn.datagen;
 
 import java.util.Properties;
 
@@ -10,7 +10,7 @@ public class VersionUtil {
         try {
             Properties props = new Properties();
             props.load(VersionUtil.class.getResourceAsStream("/version.properties"));
-            versionProperty = props.getProperty("sysinfo.version", versionProperty).trim();
+            versionProperty = props.getProperty("l2ptn.datagen.version", versionProperty).trim();
         } catch (Exception e) {
             versionProperty = "unknown";
         }

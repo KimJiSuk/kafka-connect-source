@@ -19,6 +19,8 @@ public class L2ParserConnectorConfig extends AbstractConfig {
     private static final String FILE_NAME_TEMPLATE_DOC = "FileName Template";
     public static final String FILE_PATH_CONF = "file.path";
     private static final String FILE_PATH_DOC = "File Path";
+    public static final String FILE_CHARSET_CONF = "file.charset";
+    private static final String FILE_CHARSET_DOC = "File Charset";
     public static final String FTP_URL_CONF = "ftp.url";
     private static final String FTP_URL_DOC = "FTP Url";
     public static final String FTP_PORT_CONF = "ftp.port";
@@ -53,6 +55,7 @@ public class L2ParserConnectorConfig extends AbstractConfig {
                 .define(FILE_NAME_DATEFORMAT_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FILE_NAME_DATEFORMAT_DOC)
                 .define(FILE_NAME_TEMPLATE_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FILE_NAME_TEMPLATE_DOC)
                 .define(FILE_PATH_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FILE_PATH_DOC)
+                .define(FILE_CHARSET_CONF, ConfigDef.Type.STRING, "UTF-8", ConfigDef.Importance.HIGH, FILE_CHARSET_DOC)
                 .define(FTP_URL_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FTP_URL_DOC)
                 .define(FTP_PORT_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FTP_PORT_DOC)
                 .define(FTP_ID_CONF, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, FTP_ID_DOC)
@@ -64,7 +67,6 @@ public class L2ParserConnectorConfig extends AbstractConfig {
     }
 
     private void validate() {
-        // TODO add validate
     }
 
     public List getTopics() { return this.getList(TOPICS_CONF); }
@@ -78,6 +80,8 @@ public class L2ParserConnectorConfig extends AbstractConfig {
     public String getFileNameTemplate() { return this.getString(FILE_NAME_TEMPLATE_CONF); }
 
     public String getFilePath() { return this.getString(FILE_PATH_CONF); }
+    
+    public String getFileCharset() { return this.getString(FILE_CHARSET_CONF); }
 
     public String getFtpUrl() { return this.getString(FTP_URL_CONF); }
 

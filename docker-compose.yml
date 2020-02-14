@@ -10,6 +10,7 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 32181
       ZOOKEEPER_TICK_TIME: 2000
+      TZ: 'Asia/Seoul'
     extra_hosts:
       - "moby:127.0.0.1"
 
@@ -36,6 +37,7 @@ services:
       CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
       CONFLUENT_METRICS_ENABLE: 'true'
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
+      TZ: 'Asia/Seoul'
     extra_hosts:
       - "moby:127.0.0.1"
 
@@ -51,6 +53,7 @@ services:
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: zookeeper:32181
+      TZ: 'Asia/Seoul'
     extra_hosts:
       - "moby:127.0.0.1"
 
@@ -77,6 +80,7 @@ services:
         CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
         CONFLUENT_METRICS_TOPIC_REPLICATION: 1
         PORT: 9021
+        TZ: 'Asia/Seoul'
 
 #TODO: separate connect configuration for product
 #TODO: connect distributed mode (cluster deployment)
@@ -112,5 +116,6 @@ services:
       CONNECT_ZOOKEEPER_CONNECT: 'zookeeper:32181'
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components"
       CONNECT_LOG4J_LOGGERS: "org.apache.kafka.connect.runtime.rest=WARN,org.reflections=ERROR"
+      TZ: 'Asia/Seoul'
     volumes:
       - .:/app

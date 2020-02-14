@@ -1,0 +1,109 @@
+{
+    "namespace": "com.mobigen.naas.model.l2ptn.optic",
+    "type": "record",
+    "name": "optic",
+    "doc": "L2 PTN  optic performance metric, suffix 에 따른 unit 확인 필요",
+    "version": "0.1",
+    "fields": [
+        {
+            "name": "_timestamp",
+            "doc": "The time at which the metric value was measured",
+            "type": {
+                "type": "string",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            }
+        },
+
+        {
+            "name": "tg_tid",
+            "doc": "TID",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_system_type",
+            "doc": "system type",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_slot",
+            "doc": "Slot",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_port",
+            "doc": "Port",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_pm_type",
+            "doc": "Port",
+            "type": {
+                "type": "string"
+            }
+        },
+
+
+        {
+            "name": "m_rx_min_power",
+            "doc": "rx min power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_rx_max_power",
+            "doc": "rx max power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_rx_avg_power",
+            "doc": "rx average power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_tx_min_power",
+            "doc": "tx min power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_tx_max_power",
+            "doc": "tx max power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_tx_avg_power",
+            "doc": "tx average power",
+            "unit": "dbm",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        }
+    ]
+}

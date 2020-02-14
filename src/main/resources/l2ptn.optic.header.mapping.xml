@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record id="Date">_timestamp</record>
+    <record id="TID">tg_tid</record>
+    <record id="System Type">tg_system_type</record>
+    <record id="Slot">tg_slot</record>
+    <record id="Port">tg_port</record>
+    <record id="PM_Type">tg_pm_type</record>
+    <record id="RX_Min_Power">m_rx_min_power</record>
+    <record id="RX_Max_Power">m_rx_max_power</record>
+    <record id="RX_Avg_Power">m_rx_avg_power</record>
+    <record id="TX_Min_Power">m_tx_min_power</record>
+    <record id="TX_Max_Power">m_tx_max_power</record>
+    <record id="TX_Avg_Power">m_tx_avg_power</record>
+</records>

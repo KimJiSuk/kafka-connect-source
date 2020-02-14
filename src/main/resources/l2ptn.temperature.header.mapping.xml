@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record id="Date">_timestamp</record>
+    <record id="TID">tg_tid</record>
+    <record id="System Type">tg_system_type</record>
+    <record id="Slot">tg_slot</record>
+    <record id="Time">tg_time</record>
+    <record id="Max">m_max</record>
+    <record id="Min">m_min</record>
+    <record id="Average">m_average</record>
+</records>

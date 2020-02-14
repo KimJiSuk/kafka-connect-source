@@ -1,0 +1,74 @@
+{
+    "namespace": "com.mobigen.naas.model.l2ptn.optic",
+    "type": "record",
+    "name": "temerature",
+    "doc": "L2 PTN  optic performance metric, suffix 에 따른 unit 확인 필요",
+    "version": "0.1",
+    "fields": [
+        {
+            "name": "_timestamp",
+            "doc": "The time at which the metric value was measured",
+            "type": {
+                "type": "string",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            }
+        },
+
+        {
+            "name": "tg_tid",
+            "doc": "TID",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_system_type",
+            "doc": "system type",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_slot",
+            "doc": "Slot",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_time",
+            "doc": "Time",
+            "type": {
+                "type": "string"
+            }
+        },
+
+        {
+            "name": "m_max",
+            "doc": "max temperature",
+            "unit": "degree",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_min",
+            "doc": "min temperature",
+            "unit": "degree",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_average",
+            "doc": "average temperature",
+            "unit": "degree",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        }
+    ]
+}

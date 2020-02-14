@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <records>
-    <record id="1">_timestamp</record>
-    <record id="2">tg_tid</record>
+    <record id="1">tg_tid</record>
+    <record id="2">_timestamp</record>
     <record id="3">tg_almcode</record>
     <record id="4">tg_ctag</record>
     <record id="5">tg_reptype</record>

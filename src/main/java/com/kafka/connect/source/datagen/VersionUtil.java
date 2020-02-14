@@ -16,12 +16,24 @@
 
 package com.kafka.connect.source.datagen;
 
+import java.util.Properties;
+
 class VersionUtil {
-  public static String getVersion() {
+  private static final String VERSION;
+
+  static {
+    String versionProperty = "unknown";
     try {
-      return VersionUtil.class.getPackage().getImplementationVersion();
-    } catch (Exception ex) {
-      return "0.0.0.0";
+      Properties props = new Properties();
+      props.load(VersionUtil.class.getResourceAsStream("/version.properties"));
+      versionProperty = props.getProperty("datagen.version", versionProperty).trim();
+    } catch (Exception e) {
+      versionProperty = "unknown";
     }
+    VERSION = versionProperty;
+  }
+
+  public static String getVersion() {
+    return VERSION;
   }
 }

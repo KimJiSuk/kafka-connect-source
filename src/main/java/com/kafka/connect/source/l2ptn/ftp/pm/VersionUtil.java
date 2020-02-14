@@ -1,11 +1,23 @@
 package com.kafka.connect.source.l2ptn.ftp.pm;
 
+import java.util.Properties;
+
 public class VersionUtil {
-    public static String getVersion() {
+    private static final String VERSION;
+
+    static {
+        String versionProperty = "unknown";
         try {
-            return VersionUtil.class.getPackage().getImplementationVersion();
-        } catch (Exception ex) {
-            return "0.0.0.0";
+            Properties props = new Properties();
+            props.load(VersionUtil.class.getResourceAsStream("/version.properties"));
+            versionProperty = props.getProperty("l2ptn.ftp.pm.version", versionProperty).trim();
+        } catch (Exception e) {
+            versionProperty = "unknown";
         }
+        VERSION = versionProperty;
+    }
+
+    public static String getVersion() {
+        return VERSION;
     }
 }
