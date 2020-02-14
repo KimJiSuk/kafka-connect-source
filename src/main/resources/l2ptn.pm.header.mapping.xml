@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record id="Date">_timestamp</record>
+    <record id="TID">tg_tid</record>
+    <record id="System Type">tg_system_type</record>
+    <record id="Slot">tg_slot</record>
+    <record id="Port">tg_port</record>
+    <record id="SIGNAL">tg_signal</record>
+    <record id="TIME">tg_time</record>
+    <record id="IN-ERROR-PACKETS">m_in_error_packets</record>
+    <record id="ES">m_es</record>
+    <record id="SES">m_ses</record>
+    <record id="UAS">m_uas</record>
+    <record id="IN-DISCARD-PACKETS">m_in_discard_packets</record>
+    <record id="OUT-ERROR-PACKETS">m_out_error_packets</record>
+    <record id="OUT-DISCARD-PACKETS">m_out_discard_packets</record>
+</records>

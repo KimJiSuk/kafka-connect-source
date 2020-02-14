@@ -1,0 +1,3 @@
+/* TID|System Type|Slot|Port|Name|ing_packets|ing_bytes|ing_rate(Kbps)|egr_packets|egr_bytes|egr_rate(Kbps)|Date */
+SKB_BunDang_TTA|APN20A|SXC|P13|(SW_1_PanKyo_ChangJo_Vally_TTA-SXC-P1-SKB_BunDang_TTA-SXC-P1_16001_test2)-(P1)|3358|471879|4|4900|585726|0|2019-09-27 11:15:00
+PanKyo_ChangJo_Vally_TTA|APN20A|SXC|P14|(SW_1_PanKyo_ChangJo_Vally_TTA-SXC-P1-SKB_BunDang_TTA-SXC-P1_16001_test2)-(P1)|4894|584888|5|3352|470277|0|2019-09-27 11:15:00

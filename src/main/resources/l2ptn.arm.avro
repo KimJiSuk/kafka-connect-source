@@ -1,0 +1,87 @@
+{
+    "namespace": "com.mobigen.naas.model.l2ptn.arm",
+    "type": "record",
+    "name": "arm",
+    "doc": "L2 PTN Automatic Report Message model",
+    "version": "1.0",
+    "fields": [
+        {
+            "name": "_timestamp",
+            "doc": "The time at which the metric value was measured, it is from the second field of the message header",
+            "type": {
+                "type": "string",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            }
+        },
+        {
+            "name": "tg_tid",
+            "doc": "the placeholder for Target ID, It is in the first field of the message header ",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_almcode",
+            "doc": "the placeholder for Alaram code, It is in the 3th field in the message header",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "options": [
+                        "*C",
+                        "**",
+                        "*",
+                        "WN",
+                        "NA",
+                        "A"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "tg_ctag",
+            "doc": "the placeholder for Correlation Tag, It is in the 4th field in the message header",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_reptype",
+            "doc": "the placeholder for report type, It is in the 5th field in the message header",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "options": [
+                        "REPT ALM",
+                        "REPT NVT NECONN",
+                        "REPT TCA",
+                        "REPT PM MONITOR TRAFFIC",
+                        "REPT MCU PWR RESET",
+                        "REPT MCU SW RESET",
+                        "REPT EVT PROTECT SW",
+                        "REPT EVT MPLSPROT SW",
+                        "REPT EVT PWPROT SW",
+                        "REPT EVT MCU WATCHDOG RESET",
+                        "REPT EVT UNIT RESET",
+                        "REPT EVT PORT RESET",
+                        "REPT EVT STP PORT STATE",
+                        "REPT EVT LACP LINK SYNC STATE",
+                        "REPT EVT PORT SHUTDOWN",
+                        "REPT EVT CLOCK",
+                        "REPT EVT MPLSOVERBOOKING",
+                        "REPT EVT RESET SLOT ACTIVATE",
+                        "REPT EVT LLDP DETECT",
+                        "REPT EVT PMLSTUNNELOPER"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "m_response_block",
+            "doc": "Detailed message body",
+            "kind": "RAW",
+            "type": {
+                "type": "string"
+            }
+        }
+    ]
+}

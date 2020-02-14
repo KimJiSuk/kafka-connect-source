@@ -1,0 +1,355 @@
+{
+    "namespace": "com.mobigen.naas.model.l2ptn.port",
+    "type": "record",
+    "name": "port",
+    "doc": "L2 PTN  port performance metric, suffix 에 따른 unit 확인 필요",
+    "version": "0.7",
+    "fields": [
+        {
+            "name": "_timestamp",
+            "doc": "The time at which the metric value was measured",
+            "type": {
+                "type": "string",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            }
+        },
+
+
+        {
+            "name": "tg_tid",
+            "doc": "TID",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_system_type",
+            "doc": "system type",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_slot",
+            "doc": "slot",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_port",
+            "doc": "port",
+            "type": {
+                "type": "string"
+            }
+        },
+
+
+        {
+            "name": "m_in_octets",
+            "doc": "inbound size in octets",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_ok_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_unicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_non_unicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_discard_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_error_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_broadcast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_multicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_64_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_65_to_127_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_128_to_255_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_256_to_511_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_512_to_1023_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_1024_to_1518_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_packets_1519_to_max_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_pause_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_alignment_errors",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_fcs_errors",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_symbol_errors",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_octets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_ok_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_unicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_non_unicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_discard_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_error_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_broadcast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_multicast_packets",
+            "doc": "TBD",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_pause_packets",
+            "doc": "TBD",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_rate",
+            "doc": "TBD",
+            "unit": "kbps",
+            "kind": "GAUGE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_out_rate",
+            "doc": "TBD",
+            "unit": "kbps",
+            "kind": "GAUGE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_in_no_pkt_sec",
+            "doc": "TBD",
+            "unit": "second",
+            "kind": "GAUGE",
+            "type": {
+                "type": "long"
+            }
+        },
+        {
+            "name": "m_out_no_pkt_sec",
+            "doc": "TBD",
+            "unit": "second",
+            "kind": "GAUGE",
+            "type": {
+                "type": "long"
+            }
+        },
+        {
+            "name": "m_in_loss_ratio",
+            "doc": "TBD",
+            "unit": "percentage",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "m_out_loss_ratio",
+            "doc": "TBD",
+            "unit": "percentage",
+            "kind": "GAUGE",
+            "type": {
+                "type": "float"
+            }
+        }
+    ]
+}

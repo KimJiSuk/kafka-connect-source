@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record id="Date">_timestamp</record>
+    <record id="TID">tg_tid</record>
+    <record id="System Type">tg_system_type</record>
+    <record id="Slot">tg_slot</record>
+    <record id="Port">tg_port</record>
+    <record id="in_octets">m_in_octets</record>
+    <record id="in_ok_packets">m_in_ok_packets</record>
+    <record id="in_unicast_packets">m_in_unicast_packets</record>
+    <record id="in_non_unicast_packets">m_in_non_unicast_packets</record>
+    <record id="in_discard_packets">m_in_discard_packets</record>
+    <record id="in_error_packets">m_in_error_packets</record>
+    <record id="in_broadcast_packets">m_in_broadcast_packets</record>
+    <record id="in_multicast_packets">m_in_multicast_packets</record>
+    <record id="in_packets_64_octets">m_in_packets_64_octets</record>
+    <record id="in_packets_65_to_127_octets">m_in_packets_65_to_127_octets</record>
+    <record id="in_packets_128_to_255_octets">m_in_packets_128_to_255_octets</record>
+    <record id="in_packets_256_to_511_octets">m_in_packets_256_to_511_octets</record>
+    <record id="in_packets_512_to_1023_octets">m_in_packets_512_to_1023_octets</record>
+    <record id="in_packets_1024_to_1518_octets">m_in_packets_1024_to_1518_octets</record>
+    <record id="in_packets_1519_to_max_octets">m_in_packets_1519_to_max_octets</record>
+    <record id="in_pause_packets">m_in_pause_packets</record>
+    <record id="in_alignment_errors">m_in_alignment_errors</record>
+    <record id="in_fcs_errors">m_in_fcs_errors</record>
+    <record id="in_symbol_errors">m_in_symbol_errors</record>
+    <record id="out_octets">m_out_octets</record>
+    <record id="out_ok_packets">m_out_ok_packets</record>
+    <record id="out_unicast_packets">m_out_unicast_packets</record>
+    <record id="out_non_unicast_packets">m_out_non_unicast_packets</record>
+    <record id="out_discard_packets">m_out_discard_packets</record>
+    <record id="out_error_packets">m_out_error_packets</record>
+    <record id="out_broadcast_packets">m_out_broadcast_packets</record>
+    <record id="out_multicast_packets">m_out_multicast_packets</record>
+    <record id="out_pause_packets">m_out_pause_packets</record>
+    <record id="in_rate(Kbps)">m_in_rate</record>
+    <record id="out_rate(Kbps)">m_out_rate</record>
+    <record id="in_no_pkt_sec">m_in_no_pkt_sec</record>
+    <record id="out_no_pkt_sec">m_out_no_pkt_sec</record>
+    <record id="in_loss_ratio">m_in_loss_ratio</record>
+    <record id="out_loss_ratio">m_out_loss_ratio</record>
+</records>

@@ -1,0 +1,110 @@
+{
+    "namespace": "com.mobigen.naas.model.l2ptn.ac",
+    "type": "record",
+    "name": "ac",
+    "doc": "L2 PTN access interface performance metric",
+    "version": "1.0",
+    "fields": [
+        {
+            "name": "_timestamp",
+            "doc": "The time at which the metric value was measured",
+            "type": {
+                "type": "string",
+                "format": "YYYY-MM-DD HH:mm:ss"
+            }
+        },
+
+
+        {
+            "name": "tg_tid",
+            "doc": "TID",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_system_type",
+            "doc": "system type",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_slot",
+            "doc": "slot",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_port",
+            "doc": "port",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "tg_name",
+            "doc": "name",
+            "type": {
+                "type": "string"
+            }
+        },
+
+
+        {
+            "name": "m_ing_packets",
+            "doc": "ingress packet count",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_ing_bytes",
+            "doc": "ingress packet size in bytes",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_ing_rate",
+            "doc": "ingress throughput (kbps)",
+            "unit": "kbps",
+            "kind": "GAUGE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_egr_packets",
+            "doc": "egress packet count",
+            "unit": "count",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_egr_bytes",
+            "doc": "egress packet size in bytes",
+            "unit": "byte",
+            "kind": "CUMULATIVE",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "m_egr_rate",
+            "doc": "egress throughput (kbps)",
+            "unit": "kbps",
+            "kind": "GAUGE",
+            "type": {
+                "type": "int"
+            }
+        }
+    ]
+}

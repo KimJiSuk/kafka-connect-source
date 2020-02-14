@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record id="Date">_timestamp</record>
+    <record id="TID">tg_tid</record>
+    <record id="System Type">tg_system_type</record>
+    <record id="Slot">tg_slot</record>
+    <record id="Port">tg_port</record>
+    <record id="Name">tg_name</record>
+    <record id="ing_packets">m_ing_packets</record>
+    <record id="ing_bytes">m_ing_bytes</record>
+    <record id="ing_rate(Kbps)">m_ing_rate</record>
+    <record id="egr_packets">m_egr_packets</record>
+    <record id="egr_bytes">m_egr_bytes</record>
+    <record id="egr_rate(Kbps)">m_egr_rate</record>
+</records>

@@ -1,0 +1,16 @@
+{
+    "namespace": "ksql",
+    "name": "sysinfo",
+    "type": "record",
+    "fields": [
+        {"name": "id", "type": "string"},
+        {"name": "virtualmemory", "type": "long"},
+        {"name": "freephysicalmemory", "type": "long"},
+        {"name": "freeswapspace", "type": "long"},
+        {"name": "processcpuload", "type": "double"},
+        {"name": "processcputime", "type": "long"},
+        {"name": "systemcpuload", "type": "double"},
+        {"name": "totalphysicalmemory", "type": "long"},
+        {"name": "totalswapspace", "type": "long"}
+    ]
+}
