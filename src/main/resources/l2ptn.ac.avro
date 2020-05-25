@@ -58,7 +58,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -67,7 +67,7 @@
             "unit": "byte",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -76,7 +76,7 @@
             "unit": "kbps",
             "kind": "GAUGE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -85,7 +85,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -94,7 +94,7 @@
             "unit": "byte",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -103,7 +103,7 @@
             "unit": "kbps",
             "kind": "GAUGE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         }
     ]

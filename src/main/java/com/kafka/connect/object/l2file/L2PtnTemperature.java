@@ -106,6 +106,15 @@ public class L2PtnTemperature extends FileObject {
 			return Integer.valueOf(value);
 		case LONG:
 			return Long.valueOf(value);
+		case FIXED:
+			if(schema.getName().equals("u64")) {
+				log.info("value : " + value);
+				log.info("fixedSize : " + schema.getFixedSize());
+
+				return value.getBytes();
+			} else {
+				return 0;
+			}
 		case NULL:
 			return null;
 		case STRING:

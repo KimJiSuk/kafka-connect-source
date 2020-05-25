@@ -18,8 +18,12 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -113,7 +117,16 @@ public class L2PtnPort extends FileObject {
             case INT:
                 return Integer.valueOf(value);
             case LONG:
-                return Long.valueOf(value);
+                return Long.parseUnsignedLong(value);
+            case FIXED:
+                if(schema.getName().equals("u64")) {
+                    log.info("value : " + value);
+                    log.info("fixedSize : " + schema.getFixedSize());
+
+                    return value.getBytes();
+                } else {
+                    return 0;
+                }
             case NULL:
                 return null;
             case STRING:

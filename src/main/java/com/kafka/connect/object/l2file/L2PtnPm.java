@@ -113,7 +113,16 @@ public class L2PtnPm extends FileObject {
             case INT:
                 return Integer.valueOf(value);
             case LONG:
-                return Long.valueOf(value);
+                return Long.parseUnsignedLong(value);
+            case FIXED:
+                if(schema.getName().equals("u64")) {
+                    log.info("value : " + value);
+                    log.info("fixedSize : " + schema.getFixedSize());
+
+                    return value.getBytes();
+                } else {
+                    return 0;
+                }
             case NULL:
                 return null;
             case STRING:

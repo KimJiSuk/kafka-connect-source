@@ -125,7 +125,7 @@ public class L2ParserTask extends SourceTask {
 		FTP_CONNECT_TIMEOUT = Integer.parseInt(config.getFtpConnectTimeout());
 		FTP_READ_TIMEOUT = Integer.parseInt(config.getFtpReadTimeout());
 		DATE_FORMAT = new SimpleDateFormat(fileNameDateformat);
-		
+
 		TimeZone tz = Calendar.getInstance().getTimeZone();
 		log.info("### TIME ZONE INFO : " + tz.getDisplayName() + ", " + tz.getID());
 	}
@@ -204,8 +204,12 @@ public class L2ParserTask extends SourceTask {
 	// FTP 파일 가져오기
 	private List<SourceRecord> collectFtpFile(FTPClient ftpClient, String collectDateStr, int fileType) {
 
-		// "topics": "l2ptntunnel,l2ptnac,l2ptnpm,l2ptnport,l2ptnpw,l2ptnoptic,l2ptntemperature"
-		// "file.name.prefix": "PM_TUNNEL,PM_AC,PM,PM_PORT,PM_PW,PM_OPTIC,PM_TEMPERATURE"
+		boolean isProcessCompletePendingCommand = false;
+
+		// "topics":
+		// "l2ptntunnel,l2ptnac,l2ptnpm,l2ptnport,l2ptnpw,l2ptnoptic,l2ptntemperature"
+		// "file.name.prefix":
+		// "PM_TUNNEL,PM_AC,PM,PM_PORT,PM_PW,PM_OPTIC,PM_TEMPERATURE"
 		List<SourceRecord> dataSourceList = null;
 		String topic = String.valueOf(topics.get(fileType));
 		String fileName = String.valueOf(fileNamePrefix.get(fileType)) + "_" + collectDateStr + ".txt";
@@ -301,6 +305,7 @@ public class L2ParserTask extends SourceTask {
 				}
 
 				ftpClient.completePendingCommand(); // 실행 안하면 FTP 명령, 연속 실행 못함
+				isProcessCompletePendingCommand = true; // 실행 여부 체크
 
 				// 이전에 저장된 OK 파일이 있다면 삭제
 				FTPFile[] fileList = ftpClient.listFiles();
@@ -323,6 +328,13 @@ public class L2ParserTask extends SourceTask {
 				log.info("### NOT EXIST TARGET FILE : " + fileName);
 			}
 		} catch (Exception e) {
+			if (isProcessCompletePendingCommand == false) {
+				try {
+					ftpClient.completePendingCommand();
+				} catch (IOException e1) {
+					log.error("ERROR : ftpClient.completePendingCommand", e1);
+				} // 실행 안하면 FTP 명령, 연속 실행 못함
+			}
 			log.error("TARGET FILE PROCESS ERROR", e);
 		} finally {
 			// @formatter:off
@@ -339,7 +351,7 @@ public class L2ParserTask extends SourceTask {
 
 	// 수집시간 가져오기
 	public String getCollectTime() {
-		
+
 		TimeZone tz = Calendar.getInstance().getTimeZone();
 		log.info("### TIME ZONE INFO : " + tz.getDisplayName() + ", " + tz.getID());
 

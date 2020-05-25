@@ -65,7 +65,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -74,7 +74,7 @@
             "unit": "second",
             "kind": "GAUGE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -83,7 +83,7 @@
             "unit": "second",
             "kind": "GAUGE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -92,7 +92,7 @@
             "unit": "second",
             "kind": "GAUGE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -101,7 +101,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -110,7 +110,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         },
         {
@@ -119,7 +119,7 @@
             "unit": "count",
             "kind": "CUMULATIVE",
             "type": {
-                "type": "int"
+                "type": "long"
             }
         }
     ]

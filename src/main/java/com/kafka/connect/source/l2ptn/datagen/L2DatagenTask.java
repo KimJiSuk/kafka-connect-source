@@ -186,6 +186,18 @@ public class L2DatagenTask extends SourceTask {
                     l2PtnPw.setMessageSchma(avroSchema, avroData);
                     l2PtnPw.setMessageValue(topic);
                     dataSourceList.addAll(l2PtnPw.getSourceRecord());
+                } else if(topic.contains("optic")){
+                    setAvroSchemaConfig("L2PTNOPTIC");
+                    L2PtnOptic l2PtnOptic = new L2PtnOptic(fileName, header, contents);
+                    l2PtnOptic.setMessageSchma(avroSchema, avroData);
+                    l2PtnOptic.setMessageValue(topic);
+                    dataSourceList.addAll(l2PtnOptic.getSourceRecord());
+                } else if(topic.contains("temperature")){
+                    setAvroSchemaConfig("L2PTNTEMPERATURE");
+                    L2PtnTemperature l2PtnTemperature = new L2PtnTemperature(fileName, header, contents);
+                    l2PtnTemperature.setMessageSchma(avroSchema, avroData);
+                    l2PtnTemperature.setMessageValue(topic);
+                    dataSourceList.addAll(l2PtnTemperature.getSourceRecord());
                 } else {
                     return null;
                 }
